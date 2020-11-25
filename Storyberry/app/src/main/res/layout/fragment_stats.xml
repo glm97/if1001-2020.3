@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context='.ui.stats.StatsFragment'>
+
+        <ScrollView
+            android:layout_width="409dp"
+            android:layout_height="729dp"
+            android:fillViewport="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/totalOfPagesStats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:text="@string/soFarYouveRead"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/numberOfPagesStats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="100"
+                    android:textColor="#EC8F8F"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/totalOfPagesStats"
+                    app:layout_constraintStart_toStartOf="@+id/totalOfPagesStats"
+                    app:layout_constraintTop_toBottomOf="@+id/totalOfPagesStats" />
+
+                <TextView
+                    android:id="@+id/pagesPagesStats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/pagesStats"
+                    app:layout_constraintBottom_toBottomOf="@+id/numberOfPagesStats"
+                    app:layout_constraintStart_toEndOf="@+id/numberOfPagesStats" />
+
+                <Spinner
+                    android:id="@+id/spinnerPagesMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="30dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/numberOfPagesStats" />
+
+                <TextView
+                    android:id="@+id/pagesMonthIn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/in"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@+id/spinnerPagesMonth"
+                    app:layout_constraintTop_toBottomOf="@+id/spinnerPagesMonth" />
+
+                <TextView
+                    android:id="@+id/pagesMonthMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="September"
+                    android:textColor="#EC8F8F"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/pagesMonthIn"
+                    app:layout_constraintStart_toEndOf="@+id/pagesMonthIn" />
+
+                <TextView
+                    android:id="@+id/pagesMonthTotalPages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="@string/readTotal"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/pagesMonthIn"
+                    app:layout_constraintStart_toEndOf="@+id/pagesMonthMonth" />
+
+                <TextView
+                    android:id="@+id/pagesMonthOf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/of"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@+id/pagesMonthIn"
+                    app:layout_constraintTop_toBottomOf="@+id/pagesMonthIn" />
+
+                <TextView
+                    android:id="@+id/pagesMonthNumberPages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="100"
+                    android:textColor="#EC8F8F"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/pagesMonthOf"
+                    app:layout_constraintStart_toEndOf="@+id/pagesMonthOf" />
+
+                <TextView
+                    android:id="@+id/pagesMonthPages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="@string/pagesExclamationStats"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/pagesMonthOf"
+                    app:layout_constraintStart_toEndOf="@+id/pagesMonthNumberPages" />
+
+                <TextView
+                    android:id="@+id/pagesMonthEquivalent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/readingEquivalent"
+                    app:layout_constraintStart_toStartOf="@+id/pagesMonthOf"
+                    app:layout_constraintTop_toBottomOf="@+id/pagesMonthOf" />
+
+                <TextView
+                    android:id="@+id/pagesMonthRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="33.3"
+                    android:textColor="#EC8F8F"
+                    app:layout_constraintBottom_toBottomOf="@+id/pagesMonthEquivalent"
+                    app:layout_constraintStart_toEndOf="@+id/pagesMonthEquivalent" />
+
+                <TextView
+                    android:id="@+id/pagesMonthPagesPerDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pagesPerDay"
+                    app:layout_constraintStart_toStartOf="@+id/pagesMonthEquivalent"
+                    app:layout_constraintTop_toBottomOf="@+id/pagesMonthEquivalent" />
+
+                <Spinner
+                    android:id="@+id/spinnerPagesYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    app:layout_constraintStart_toStartOf="@+id/pagesMonthPagesPerDay"
+                    app:layout_constraintTop_toBottomOf="@+id/pagesMonthPagesPerDay" />
+
+                <TextView
+                    android:id="@+id/pagesYearIn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/in"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@+id/spinnerPagesYear"
+                    app:layout_constraintTop_toBottomOf="@+id/spinnerPagesYear" />
+
+                <TextView
+                    android:id="@+id/pagesYearYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="2020"
+                    android:textColor="#EC8F8F"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/pagesYearIn"
+                    app:layout_constraintStart_toEndOf="@+id/pagesYearIn" />
+
+                <TextView
+                    android:id="@+id/pagesYearTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="@string/readTotal"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/pagesYearIn"
+                    app:layout_constraintStart_toEndOf="@+id/pagesYearYear" />
+
+                <TextView
+                    android:id="@+id/pageYearOf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/of"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@+id/pagesYearIn"
+                    app:layout_constraintTop_toBottomOf="@+id/pagesYearIn" />
+
+                <TextView
+                    android:id="@+id/pagesYearNumberOfPages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="100"
+                    android:textColor="#EC8F8F"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/pageYearOf"
+                    app:layout_constraintStart_toEndOf="@+id/pageYearOf" />
+
+                <TextView
+                    android:id="@+id/pagesYearPages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="@string/pagesExclamationStats"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/pageYearOf"
+                    app:layout_constraintStart_toEndOf="@+id/pagesYearNumberOfPages" />
+
+                <TextView
+                    android:id="@+id/pagesYearEquivalent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/readingEquivalent"
+                    app:layout_constraintStart_toStartOf="@+id/pageYearOf"
+                    app:layout_constraintTop_toBottomOf="@+id/pageYearOf" />
+
+                <TextView
+                    android:id="@+id/pagesYearRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="0.27"
+                    android:textColor="#EC8F8F"
+                    app:layout_constraintBottom_toBottomOf="@+id/pagesYearEquivalent"
+                    app:layout_constraintStart_toEndOf="@+id/pagesYearEquivalent" />
+
+                <TextView
+                    android:id="@+id/pagesYearPagesPerDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pagesPerDay"
+                    app:layout_constraintStart_toStartOf="@+id/pagesYearEquivalent"
+                    app:layout_constraintTop_toBottomOf="@+id/pagesYearEquivalent" />
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="0dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pagesYearPagesPerDay" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

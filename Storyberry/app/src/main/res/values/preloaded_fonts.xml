@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/actor</item>
+        <item>@font/andika</item>
+        <item>@font/baloo</item>
+        <item>@font/boogaloo</item>
+        <item>@font/coming_soon</item>
+        <item>@font/fredoka_one</item>
+        <item>@font/indie_flower</item>
+        <item>@font/mclaren</item>
+        <item>@font/secular_one</item>
+    </array>
+</resources>

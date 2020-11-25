@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/profileEditProfile"
+            android:layout_width="110dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="100dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/nameLabelEditProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="100dp"
+            android:text="@string/name"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/profileEditProfile"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/nameEditProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toEndOf="@+id/profileEditProfile"
+            app:layout_constraintTop_toBottomOf="@+id/nameLabelEditProfile" />
+
+        <TextView
+            android:id="@+id/emailLabelEditProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/email"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/profileEditProfile"
+            app:layout_constraintTop_toBottomOf="@+id/nameEditProfile" />
+
+        <EditText
+            android:id="@+id/emailEditProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toEndOf="@+id/profileEditProfile"
+            app:layout_constraintTop_toBottomOf="@+id/emailLabelEditProfile" />
+
+        <TextView
+            android:id="@+id/passwordLabelEditProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/password"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/profileEditProfile"
+            app:layout_constraintTop_toBottomOf="@+id/emailEditProfile" />
+
+        <EditText
+            android:id="@+id/passwordEditProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            app:layout_constraintStart_toEndOf="@+id/profileEditProfile"
+            app:layout_constraintTop_toBottomOf="@+id/passwordLabelEditProfile" />
+
+        <Button
+            android:id="@+id/buttonUploadPhotoEditProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/uploadPhoto"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="@+id/profileEditProfile"
+            app:layout_constraintStart_toStartOf="@+id/profileEditProfile"
+            app:layout_constraintTop_toBottomOf="@+id/profileEditProfile" />
+
+        <Button
+            android:id="@+id/buttonUpdateEditProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:text="@string/updateButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordEditProfile" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

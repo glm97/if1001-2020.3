@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/titleLabelNewStory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/title"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/titleNewStory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/titleLabelNewStory"
+        app:layout_constraintTop_toBottomOf="@+id/titleLabelNewStory" />
+
+    <TextView
+        android:id="@+id/authorLabelNewStory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/author"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/titleLabelNewStory"
+        app:layout_constraintTop_toBottomOf="@+id/titleNewStory" />
+
+    <EditText
+        android:id="@+id/authorNewStory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/titleLabelNewStory"
+        app:layout_constraintTop_toBottomOf="@+id/authorLabelNewStory" />
+
+    <TextView
+        android:id="@+id/pagesLabelNewStory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/pages"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/titleLabelNewStory"
+        app:layout_constraintTop_toBottomOf="@+id/authorNewStory" />
+
+    <EditText
+        android:id="@+id/pagesNewStory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/titleLabelNewStory"
+        app:layout_constraintTop_toBottomOf="@+id/pagesLabelNewStory" />
+
+    <TextView
+        android:id="@+id/tagsLabelNewStory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/tags"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/titleLabelNewStory"
+        app:layout_constraintTop_toBottomOf="@+id/pagesNewStory" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintStart_toStartOf="@+id/titleLabelNewStory"
+        app:layout_constraintTop_toBottomOf="@+id/tagsLabelNewStory" />
+
+    <TextView
+        android:id="@+id/startLabelNewStory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/startedReading"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/titleLabelNewStory"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
+
+    <EditText
+        android:id="@+id/startNewStory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="@+id/titleLabelNewStory"
+        app:layout_constraintTop_toBottomOf="@+id/startLabelNewStory" />
+
+    <Button
+        android:id="@+id/buttonAddNewStory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/createButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startNewStory" />
+</androidx.constraintlayout.widget.ConstraintLayout>

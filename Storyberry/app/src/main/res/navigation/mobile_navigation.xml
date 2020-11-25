@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.storyberry.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_editprofile"
+            app:destination="@id/navigation_editprofile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_editprofile"
+        android:name="com.example.storyberry.ui.profile.EditProfileFragment"
+        android:label="Edit Profile"
+        tools:layout="@layout/fragment_editprofile" />
+
+    <fragment
+        android:id="@+id/navigation_entries"
+        android:name="com.example.storyberry.ui.entries.EntriesByStoryFragment"
+        android:label="Entries"
+        tools:layout="@layout/fragment_entriesbystory" >
+        <action
+            android:id="@+id/action_navigation_entries_to_navigation_entriesbycalendar"
+            app:destination="@id/navigation_entriesbycalendar" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_entriesbycalendar"
+        android:name="com.example.storyberry.ui.entries.EntriesByCalendarFragment"
+        android:label="Entries Calendar"
+        tools:layout="@layout/fragment_entriesbycalendar">
+        <action
+            android:id="@+id/action_navigation_entriesbycalendar_to_navigation_entries"
+            app:destination="@id/navigation_entries" />
+        <action
+            android:id="@+id/action_navigation_entriesbycalendar_to_navigation_entriesbydate"
+            app:destination="@id/navigation_entriesbydate" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_entriesbydate"
+        android:name="com.example.storyberry.ui.entries.EntriesByDateFragment"
+        android:label="Entries by Date"
+        tools:layout="@layout/fragment_entriesbydate" />
+
+    <fragment
+        android:id="@+id/navigation_stats"
+        android:name="com.example.storyberry.ui.stats.StatsFragment"
+        android:label="Stats"
+        tools:layout="@layout/fragment_stats" />
+
+</navigation>

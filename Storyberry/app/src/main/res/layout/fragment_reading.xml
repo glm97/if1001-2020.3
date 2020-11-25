@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/pagesReadLabelReading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="45dp"
+        android:text="@string/pagesRead"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/pagessReadReading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:ems="4"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/pagesReadLabelReading"
+        app:layout_constraintStart_toEndOf="@+id/pagesReadLabelReading" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:progress="50"
+        app:layout_constraintBottom_toBottomOf="@+id/pagesReadLabelReading"
+        app:layout_constraintStart_toEndOf="@+id/totalPagesReading" />
+
+    <TextView
+        android:id="@+id/progressLabelReading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="50%"
+        app:layout_constraintBottom_toBottomOf="@+id/progressBar"
+        app:layout_constraintStart_toEndOf="@+id/progressBar" />
+
+    <TextView
+        android:id="@+id/totalPagesReading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="/ 100"
+        app:layout_constraintBottom_toBottomOf="@+id/pagesReadLabelReading"
+        app:layout_constraintStart_toEndOf="@+id/pagessReadReading" />
+
+    <TextView
+        android:id="@+id/startedReadingLabelReading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/startedReading"
+        app:layout_constraintStart_toStartOf="@+id/pagesReadLabelReading"
+        app:layout_constraintTop_toBottomOf="@+id/pagesReadLabelReading" />
+
+    <TextView
+        android:id="@+id/startDateReading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="15/09/2020"
+        app:layout_constraintBottom_toBottomOf="@+id/startedReadingLabelReading"
+        app:layout_constraintStart_toEndOf="@+id/startedReadingLabelReading" />
+
+    <TextView
+        android:id="@+id/tagsLabelReading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/tagsReading"
+        app:layout_constraintStart_toStartOf="@+id/pagesReadLabelReading"
+        app:layout_constraintTop_toBottomOf="@+id/finishedReadingLabelReading" />
+
+    <TextView
+        android:id="@+id/tagsReading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="fantasy, mythology, favorites"
+        app:layout_constraintBottom_toBottomOf="@+id/tagsLabelReading"
+        app:layout_constraintStart_toEndOf="@+id/tagsLabelReading" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tagsReading" />
+
+    <Button
+        android:id="@+id/buttonFinishedReading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/finishedButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView2" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="142dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonFinishedReading"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonFinishedReading"
+        app:layout_constraintTop_toTopOf="@+id/buttonFinishedReading"
+        app:srcCompat="@android:drawable/btn_dialog" />
+
+    <TextView
+        android:id="@+id/finishedReadingLabelReading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/finishedReading"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/startedReadingLabelReading"
+        app:layout_constraintTop_toBottomOf="@+id/startedReadingLabelReading" />
+
+    <TextView
+        android:id="@+id/finishDateReading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="27/09/2020"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/finishedReadingLabelReading"
+        app:layout_constraintStart_toEndOf="@+id/finishedReadingLabelReading" />
+
+    <TextView
+        android:id="@+id/statusReading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/statusRead"
+        android:textColor="#4CAF50"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/startedReadingLabelReading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

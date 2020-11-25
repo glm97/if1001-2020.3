@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/storyTitleItem"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="16dp"
+        android:background="#00FFFFFF"
+        android:fontFamily="@font/actor"
+        android:text="Title"
+        android:textAlignment="gravity"
+        android:textAllCaps="false"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/storyStatusItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Status"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/storyTitleItem"
+        app:layout_constraintStart_toEndOf="@+id/storyTitleItem"
+        app:layout_constraintTop_toTopOf="@+id/storyTitleItem" />
+
+    <TextView
+        android:id="@+id/storyAuthorItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Author"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="@+id/storyTitleItem"
+        app:layout_constraintTop_toBottomOf="@+id/storyTitleItem" />
+
+    <TextView
+        android:id="@+id/storyStartItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/startedReading"
+        app:layout_constraintStart_toStartOf="@+id/storyTitleItem"
+        app:layout_constraintTop_toBottomOf="@+id/storyAuthorItem" />
+
+    <TextView
+        android:id="@+id/storyDateStartItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="Date"
+        app:layout_constraintBottom_toBottomOf="@+id/storyStartItem"
+        app:layout_constraintStart_toEndOf="@+id/storyStartItem" />
+
+    <TextView
+        android:id="@+id/storyFinishItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/finishedReading"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/storyTitleItem"
+        app:layout_constraintTop_toBottomOf="@+id/storyStartItem" />
+
+    <TextView
+        android:id="@+id/storyFinishDateItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="Date"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/storyFinishItem"
+        app:layout_constraintStart_toEndOf="@+id/storyFinishItem"
+        app:layout_constraintTop_toTopOf="@+id/storyFinishItem" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/storyFinishItem" />
+</androidx.constraintlayout.widget.ConstraintLayout>

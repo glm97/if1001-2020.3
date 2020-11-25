@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Storyberry</string>
+    <string name="title_activity_main2">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="name">Name</string>
+    <string name="email">E-mail</string>
+    <string name="password">Password</string>
+    <string name="uploadPhoto">Upload Photo</string>
+    <string name="updateButton">Update</string>
+    <string name="createButton">Create</string>
+    <string name="signIn">Sign in</string>
+    <string name="signUp">Sign up</string>
+    <string name="forgotPassword">Forgot password?</string>
+    <string name="pagesRead">Pages read:</string>
+    <string name="startedReading">Started reading on:</string>
+    <string name="tagsReading">Tags:</string>
+    <string name="finishedButton">Finished</string>
+    <string name="finishedReading">Finished reading on:</string>
+    <string name="statusRead">READ</string>
+    <string name="title">Title</string>
+    <string name="author">Author</string>
+    <string name="pages">Pages</string>
+    <string name="tags">Tags</string>
+    <string name="filterStories">Filter Stories</string>
+    <string name="welcomeBack">Welcome back!</string>
+    <string name="editProfile">Edit Profile</string>
+    <string name="oneStoryADay">\"One story a day keeps the doctor away!\"</string>
+    <string name="soFarYouveRead">So far you\'ve read a total of</string>
+    <string name="pagesStats">pages</string>
+    <string name="in">In</string>
+    <string name="readTotal">you read a total</string>
+    <string name="of">of</string>
+    <string name="pagesExclamationStats">pages!</string>
+    <string name="readingEquivalent">That\'s equivalent to reading</string>
+    <string name="pagesPerDay">pages per day.</string>
+</resources>
